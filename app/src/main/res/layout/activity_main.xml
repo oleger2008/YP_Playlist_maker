@@ -25,7 +25,7 @@
         android:layout_height="0sp"
         android:layout_weight="1"
         android:layout_marginBottom="@dimen/common_indent"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/yp_white"
         android:gravity="center"
         android:text="@string/search"
