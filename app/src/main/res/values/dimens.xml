@@ -5,4 +5,10 @@
     <dimen name="corner_radius_16">16dp</dimen>
     <dimen name="common_indent">16dp</dimen>
     <dimen name="icon_padding">8dp</dimen>
+    <dimen name="panel_header_height">56dp</dimen>
+    <dimen name="panel_header_margin_bot">24dp</dimen>
+    <dimen name="panel_title_margin_top">14dp</dimen>
+    <dimen name="panel_button_size">48dp</dimen>
+    <dimen name="panel_button_margin">4dp</dimen>
+    <dimen name="settings_line_height">61dp</dimen>
 </resources>
