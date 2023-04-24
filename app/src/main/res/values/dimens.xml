@@ -10,5 +10,5 @@
     <dimen name="panel_title_margin_top">14dp</dimen>
     <dimen name="panel_button_size">48dp</dimen>
     <dimen name="panel_button_margin">4dp</dimen>
-    <dimen name="settings_line_height">61dp</dimen>
+    <dimen name="settings_line_height">62dp</dimen>
 </resources>
