@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/yp_white"
+    android:background="@color/white"
     tools:context=".SettingsActivity">
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:layout_width="@dimen/panel_button_size"
             android:layout_height="@dimen/panel_button_size"
             android:layout_margin="@dimen/panel_button_margin"
-            android:background="@color/yp_white"
+            android:background="@color/white"
             android:foreground="?attr/selectableItemBackground"
             android:src="@drawable/arrow_back"/>
 
