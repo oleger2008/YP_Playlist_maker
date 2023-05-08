@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="?attr/colorPrimary"
     tools:context=".SettingsActivity">
 
     <LinearLayout style="@style/TitlePanel"
@@ -30,12 +30,8 @@
             android:id="@+id/dark_theme_text"
             android:text="@string/dark_theme"/>
         
-        <Switch
-            android:id="@+id/dark_theme_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="18dp"
-            android:layout_gravity="center_vertical"/>
+        <Switch style="@style/DarkThemeSwitch"
+            android:id="@+id/dark_theme_switch"/>
 
     </LinearLayout>
 
