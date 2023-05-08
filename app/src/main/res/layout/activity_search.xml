@@ -7,13 +7,21 @@
     android:orientation="vertical"
     android:background="?attr/colorPrimary">
 
-    <TextView style="@style/HeaderText"
-        android:id="@+id/title_text"
-        android:text="@string/search"
-        android:layout_marginTop="@dimen/title_text_margin_top"
-        android:layout_marginBottom="@dimen/common_indent"
-        android:layout_marginStart="@dimen/common_indent"
-        android:layout_marginEnd="@dimen/common_indent"/>
+    <LinearLayout style="@style/TitlePanel"
+        android:id="@+id/title_panel">
+
+        <ImageButton style="@style/TitleButton"
+            android:id="@+id/return_button"
+            android:src="@drawable/arrow_back"
+            android:layout_margin="@dimen/title_button_margin"/>
+
+        <TextView style="@style/TitleText"
+            android:id="@+id/title_text"
+            android:text="@string/search"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/title_text_margin_top"/>
+
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
