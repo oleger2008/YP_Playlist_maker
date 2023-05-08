@@ -15,9 +15,40 @@
         android:layout_marginStart="@dimen/common_indent"
         android:layout_marginEnd="@dimen/common_indent"/>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="52dp">
 
-    </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:paddingHorizontal="12dp"
+            android:layout_marginHorizontal="@dimen/common_indent"
+            android:drawableStart="@drawable/loop_16"
+            android:drawablePadding="@dimen/icon_padding"
+            android:inputType="text"
+            android:hint="@string/search"
+            android:textColorHint="?attr/colorOnSecondary"
+            android:textColor="@color/yp_black"
+            android:lines="1"
+            android:maxLength="50"
+            android:background="?attr/colorSecondary"
+            android:drawableTint="?attr/colorOnSecondary"
+            android:textSize="@dimen/query_text_size"
+            android:fontFamily="@font/ys_display_regular"
+            android:textFontWeight="400"
+            app:corner_radius="@dimen/corner_radius_16"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross"
+            android:layout_marginEnd="28dp"
+            app:tint="?attr/colorOnSecondary"
+            android:layout_gravity="end|center_vertical"
+            android:visibility="gone"
+            android:contentDescription="@string/clear"/>
+
+    </FrameLayout>
 </LinearLayout>
