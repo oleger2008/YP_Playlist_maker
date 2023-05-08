@@ -12,6 +12,10 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        initButtonsCallbacks()
+    }
+
+    private fun initButtonsCallbacks() {
         val returnButton = findViewById<ImageButton>(R.id.return_button)
         returnButton.setOnClickListener {
             val mainIntent = Intent(this, MainActivity::class.java)
