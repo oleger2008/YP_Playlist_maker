@@ -19,4 +19,55 @@
         <item name="iconTint">@color/yp_black</item>
         <item name="iconPadding">@dimen/icon_padding</item>
     </style>
+
+    <style name="TitlePanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_header_height</item>
+        <item name="android:layout_marginBottom">@dimen/title_header_margin_bot</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TitleButton">
+        <item name="android:layout_width">@dimen/title_button_size</item>
+        <item name="android:layout_height">@dimen/title_button_size</item>
+        <item name="android:layout_margin">@dimen/title_button_margin</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">@dimen/title_text_margin_top</item>
+        <item name="android:textColor">@color/yp_black</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="SettingsLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/settings_line_height</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="SettingsLineText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/common_indent</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:textColor">@color/yp_black</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <style name="SettingsLineImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/common_indent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
 </resources>
