@@ -13,7 +13,7 @@ import android.widget.ImageView
 class SearchActivity : AppCompatActivity() {
     private lateinit var searchEditText: EditText
     private lateinit var clearButton: ImageView
-    private var queryText: String = ""
+    private var searchText: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +44,7 @@ class SearchActivity : AppCompatActivity() {
 
             override fun onTextChanged(sequence: CharSequence, start: Int, before: Int, count: Int) {
                 clearButton.visibility = clearButtonVisibility(sequence)
-                queryText = sequence.toString()
+                searchText = sequence.toString()
             }
 
             override fun afterTextChanged(sequence: Editable?) {
