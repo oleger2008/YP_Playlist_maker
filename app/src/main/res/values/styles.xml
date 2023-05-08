@@ -20,6 +20,20 @@
         <item name="iconPadding">@dimen/icon_padding</item>
     </style>
 
+    <style name="HeaderText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/title_text_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/title_header_margin_bot</item>
+        <item name="android:layout_marginStart">@dimen/common_indent</item>
+        <item name="android:layout_marginEnd">@dimen/common_indent</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
     <style name="TitlePanel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/title_header_height</item>
