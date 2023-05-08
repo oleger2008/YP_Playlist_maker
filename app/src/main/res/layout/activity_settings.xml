@@ -12,15 +12,15 @@
     <LinearLayout
         android:id="@+id/panel_header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/panel_header_height"
-        android:layout_marginBottom="@dimen/panel_header_margin_bot"
+        android:layout_height="@dimen/title_header_height"
+        android:layout_marginBottom="@dimen/title_header_margin_bot"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/return_button"
-            android:layout_width="@dimen/panel_button_size"
-            android:layout_height="@dimen/panel_button_size"
-            android:layout_margin="@dimen/panel_button_margin"
+            android:layout_width="@dimen/title_button_size"
+            android:layout_height="@dimen/title_button_size"
+            android:layout_margin="@dimen/title_button_margin"
             android:background="@color/white"
             android:foreground="?attr/selectableItemBackground"
             android:src="@drawable/arrow_back"/>
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="@dimen/panel_title_margin_top"
+            android:layout_marginTop="@dimen/title_text_margin_top"
             android:text="@string/settings"
             android:textColor="@color/yp_black"
             android:textSize="@dimen/title"
