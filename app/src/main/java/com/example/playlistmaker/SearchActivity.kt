@@ -12,7 +12,7 @@ import android.widget.ImageView
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var searchEditText: EditText
-    private lateinit var clearSearchTextButton: ImageView
+    private lateinit var clearButton: ImageView
     private var queryText: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,11 +25,11 @@ class SearchActivity : AppCompatActivity() {
 
     private fun lateInit() {
         searchEditText = findViewById(R.id.search_edit_text)
-        clearSearchTextButton = findViewById<ImageView>(R.id.search_clear_button)
+        clearButton = findViewById<ImageView>(R.id.search_clear_button)
     }
 
     private fun setListeners() {
-        clearSearchTextButton.setOnClickListener {
+        clearButton.setOnClickListener {
             searchEditText.setText("")
             hideKeyboard()
         }
@@ -43,7 +43,7 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(sequence: CharSequence, start: Int, before: Int, count: Int) {
-                clearSearchTextButton.visibility = clearButtonVisibility(sequence)
+                clearButton.visibility = clearButtonVisibility(sequence)
                 queryText = sequence.toString()
             }
 
