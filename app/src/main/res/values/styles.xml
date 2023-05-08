@@ -77,7 +77,7 @@
         <item name="android:layout_marginStart">@dimen/settings_line_image_margin_start</item>
         <item name="android:layout_marginEnd">@dimen/common_indent</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="tint">?attr/colorOnSecondary</item>
+        <item name="tint">?attr/colorSecondaryVariant</item>
     </style>
 
     <style name="DarkThemeSwitch" parent="Widget.Material3.CompoundButton.Switch">
