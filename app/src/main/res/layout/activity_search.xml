@@ -20,6 +20,7 @@
         android:layout_height="52dp">
 
         <EditText
+            android:id="@+id/search_edit_text"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_gravity="center"
@@ -41,6 +42,7 @@
             app:corner_radius="@dimen/corner_radius_16"/>
 
         <ImageView
+            android:id="@+id/search_clear_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cross"
@@ -51,4 +53,5 @@
             android:contentDescription="@string/clear"/>
 
     </FrameLayout>
+
 </LinearLayout>
