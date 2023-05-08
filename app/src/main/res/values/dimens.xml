@@ -14,4 +14,6 @@
     <dimen name="settings_line_height">62dp</dimen>
     <dimen name="settings_line_image_margin_start">8dp</dimen>
     <dimen name="query_text_size">16sp</dimen>
+    <dimen name="search_edit_text_padding">12dp</dimen>
+    <dimen name="search_edit_text_height">36dp</dimen>
 </resources>
