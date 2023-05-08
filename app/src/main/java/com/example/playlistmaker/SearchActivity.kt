@@ -1,6 +1,7 @@
 package com.example.playlistmaker
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -8,11 +9,13 @@ import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var searchEditText: EditText
     private lateinit var clearButton: ImageView
+    private lateinit var returnButton: ImageButton
     private var searchText: String = ""
 
     companion object {
@@ -37,6 +40,10 @@ class SearchActivity : AppCompatActivity() {
         clearButton.setOnClickListener {
             searchEditText.setText("")
             hideKeyboard()
+        }
+        returnButton.setOnClickListener {
+            val mainIntent = Intent(this, MainActivity::class.java)
+            startActivity(mainIntent)
         }
         searchEditText.addTextChangedListener(getSearchTextWatcher())
     }
