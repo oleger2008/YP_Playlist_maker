@@ -10,15 +10,19 @@
     tools:context=".SettingsActivity">
 
     <LinearLayout style="@style/TitlePanel"
-        android:id="@+id/title_panel">
+        android:id="@+id/title_panel"
+        android:layout_marginBottom="@dimen/title_header_margin_bot">
 
         <ImageButton style="@style/TitleButton"
             android:id="@+id/return_button"
-            android:src="@drawable/arrow_back"/>
+            android:src="@drawable/arrow_back"
+            android:layout_margin="@dimen/title_button_margin"/>
 
         <TextView style="@style/TitleText"
             android:id="@+id/title_text"
-            android:text="@string/settings"/>
+            android:text="@string/settings"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/title_text_margin_top"/>
 
     </LinearLayout>
 
