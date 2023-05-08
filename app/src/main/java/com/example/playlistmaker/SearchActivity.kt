@@ -30,6 +30,7 @@ class SearchActivity : AppCompatActivity() {
     private fun lateInit() {
         searchEditText = findViewById(R.id.search_edit_text)
         clearButton = findViewById<ImageView>(R.id.search_clear_button)
+        returnButton = findViewById<ImageButton>(R.id.search_return_button)
     }
 
     private fun setListeners() {

@@ -16,7 +16,7 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun initButtonsCallbacks() {
-        val returnButton = findViewById<ImageButton>(R.id.return_button)
+        val returnButton = findViewById<ImageButton>(R.id.settings_return_button)
         returnButton.setOnClickListener {
             val mainIntent = Intent(this, MainActivity::class.java)
             startActivity(mainIntent)

@@ -14,7 +14,7 @@
         android:layout_marginBottom="@dimen/title_header_margin_bot">
 
         <ImageButton style="@style/TitleButton"
-            android:id="@+id/return_button"
+            android:id="@+id/settings_return_button"
             android:src="@drawable/arrow_back"
             android:layout_margin="@dimen/title_button_margin"/>
 
