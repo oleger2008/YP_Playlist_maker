@@ -15,6 +15,10 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var clearButton: ImageView
     private var searchText: String = ""
 
+    companion object {
+        const val SEARCH_TEXT = "SEARCH_TEXT"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -66,5 +70,16 @@ class SearchActivity : AppCompatActivity() {
         val keyboard = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         keyboard.hideSoftInputFromWindow(searchEditText.windowToken, 0)
         searchEditText.clearFocus()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(SEARCH_TEXT, searchText)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        searchText = savedInstanceState.getString(SEARCH_TEXT, getString(R.string.search))
+        searchEditText.setText(searchText)
     }
 }
