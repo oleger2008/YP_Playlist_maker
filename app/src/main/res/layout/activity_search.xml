@@ -16,7 +16,6 @@
             android:layout_margin="@dimen/title_button_margin"/>
 
         <TextView style="@style/TitleText"
-            android:id="@+id/title_text"
             android:text="@string/search"
             android:layout_marginStart="8dp"
             android:layout_marginTop="@dimen/title_text_margin_top"/>
