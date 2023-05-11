@@ -38,8 +38,7 @@ class SearchActivity : AppCompatActivity() {
             hideKeyboard()
         }
         returnButton.setOnClickListener {
-            val mainIntent = Intent(this, MainActivity::class.java)
-            startActivity(mainIntent)
+            finish()
         }
         searchEditText.addTextChangedListener(getSearchTextWatcher())
     }

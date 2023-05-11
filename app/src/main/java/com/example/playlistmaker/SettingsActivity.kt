@@ -18,8 +18,7 @@ class SettingsActivity : AppCompatActivity() {
     private fun initButtonsCallbacks() {
         val returnButton = findViewById<ImageButton>(R.id.settings_return_button)
         returnButton.setOnClickListener {
-            val mainIntent = Intent(this, MainActivity::class.java)
-            startActivity(mainIntent)
+            finish()
         }
 
         val shareButton = findViewById<LinearLayout>(R.id.share_settings_line)
@@ -38,8 +37,8 @@ class SettingsActivity : AppCompatActivity() {
                 putExtra(Intent.EXTRA_EMAIL, getString(R.string.support_email))
                 putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_letter_subject))
                 putExtra(Intent.EXTRA_TEXT, getString(R.string.support_letter_text))
+                startActivity(this)
             }
-            startActivity(supIntent)
         }
 
         val licenseAgreementButton = findViewById<LinearLayout>(R.id.license_agreement_settings_line)
