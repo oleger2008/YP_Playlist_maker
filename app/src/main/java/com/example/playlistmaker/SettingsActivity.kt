@@ -23,11 +23,11 @@ class SettingsActivity : AppCompatActivity() {
 
         val shareButton = findViewById<LinearLayout>(R.id.share_settings_line)
         shareButton.setOnClickListener {
-            val shareIntent = Intent(Intent.ACTION_SEND).apply {
+            Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, R.string.share_link)
+                startActivity(this)
             }
-            startActivity(shareIntent)
         }
 
         val supportButton = findViewById<LinearLayout>(R.id.support_settings_line)
@@ -43,10 +43,10 @@ class SettingsActivity : AppCompatActivity() {
 
         val licenseAgreementButton = findViewById<LinearLayout>(R.id.license_agreement_settings_line)
         licenseAgreementButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW).apply {
+            Intent(Intent.ACTION_VIEW).apply {
                 data = Uri.parse(getString(R.string.license_agreement_link))
+                startActivity(this)
             }
-            startActivity(intent)
         }
     }
 }
