@@ -38,7 +38,10 @@
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/dark_theme_text"
-            android:text="@string/dark_theme"/>
+            android:text="@string/dark_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
         
         <Switch style="@style/DarkThemeSwitch"
             android:id="@+id/dark_theme_switch"
@@ -57,7 +60,10 @@
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/share_text"
-            android:text="@string/share"/>
+            android:text="@string/share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
         <ImageView style="@style/SettingsLineImage"
             android:src="@drawable/share"/>
@@ -72,7 +78,10 @@
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/support_text"
-            android:text="@string/support"/>
+            android:text="@string/support"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
         <ImageView style="@style/SettingsLineImage"
             android:src="@drawable/support"/>
@@ -87,7 +96,10 @@
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/license_agreement_text"
-            android:text="@string/license_agreement"/>
+            android:text="@string/license_agreement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
         <ImageView style="@style/SettingsLineImage"
             android:src="@drawable/arrow_forward"/>
