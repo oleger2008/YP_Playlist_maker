@@ -41,7 +41,8 @@
             android:text="@string/dark_theme"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/common_indent"/>
         
         <Switch style="@style/DarkThemeSwitch"
             android:id="@+id/dark_theme_switch"
@@ -63,7 +64,8 @@
             android:text="@string/share"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/common_indent"/>
 
         <ImageView style="@style/SettingsLineImage"
             android:src="@drawable/share"/>
@@ -81,7 +83,8 @@
             android:text="@string/support"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/common_indent"/>
 
         <ImageView style="@style/SettingsLineImage"
             android:src="@drawable/support"/>
@@ -99,7 +102,8 @@
             android:text="@string/license_agreement"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/common_indent"/>
 
         <ImageView style="@style/SettingsLineImage"
             android:src="@drawable/arrow_forward"/>
