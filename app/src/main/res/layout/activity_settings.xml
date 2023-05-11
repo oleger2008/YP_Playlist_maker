@@ -9,8 +9,10 @@
     android:background="?attr/colorPrimary"
     tools:context=".SettingsActivity">
 
-    <LinearLayout style="@style/TitlePanel"
-        android:id="@+id/title_panel"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_header_height"
+        android:orientation="horizontal"
         android:layout_marginBottom="@dimen/title_header_margin_bot">
 
         <ImageButton style="@style/TitleButton"
