@@ -52,10 +52,6 @@
     </style>
 
     <style name="SettingsLineImage">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/settings_line_image_margin_start</item>
-        <item name="android:layout_marginEnd">@dimen/settings_line_image_margin_end</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="tint">?attr/colorSecondaryVariant</item>
     </style>
