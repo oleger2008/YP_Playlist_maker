@@ -18,10 +18,6 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var returnButton: ImageButton
     private var searchText: String = ""
 
-    companion object {
-        const val SEARCH_TEXT = "SEARCH_TEXT"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -89,5 +85,9 @@ class SearchActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         searchText = savedInstanceState.getString(SEARCH_TEXT, getString(R.string.search))
         searchEditText.setText(searchText)
+    }
+
+    companion object {
+        private const val SEARCH_TEXT = "SEARCH_TEXT"
     }
 }
