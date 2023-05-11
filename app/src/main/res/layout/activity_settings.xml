@@ -29,8 +29,11 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/SettingsLine"
+    <LinearLayout
         android:id="@+id/dark_theme_settings_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_line_height"
+        android:orientation="horizontal"
         tools:ignore="UseSwitchCompatOrMaterialXml">
 
         <TextView style="@style/SettingsLineText"
@@ -46,8 +49,11 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/SettingsLine"
-        android:id="@+id/share_settings_line">
+    <LinearLayout
+        android:id="@+id/share_settings_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_line_height"
+        android:orientation="horizontal">
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/share_text"
@@ -58,8 +64,11 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/SettingsLine"
-        android:id="@+id/support_settings_line">
+    <LinearLayout
+        android:id="@+id/support_settings_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_line_height"
+        android:orientation="horizontal">
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/support_text"
@@ -70,8 +79,11 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/SettingsLine"
-        android:id="@+id/license_agreement_settings_line">
+    <LinearLayout
+        android:id="@+id/license_agreement_settings_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_line_height"
+        android:orientation="horizontal">
 
         <TextView style="@style/SettingsLineText"
             android:id="@+id/license_agreement_text"
