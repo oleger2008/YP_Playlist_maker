@@ -23,10 +23,11 @@ class SettingsActivity : AppCompatActivity() {
 
         val shareButton = findViewById<LinearLayout>(R.id.share_settings_line)
         shareButton.setOnClickListener {
-            Intent(Intent.ACTION_SEND).apply {
+            Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, getString(R.string.share_link))
                 type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, R.string.share_link)
-                startActivity(this)
+                startActivity(Intent.createChooser(this, "Sharing..."))
             }
         }
 
