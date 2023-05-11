@@ -32,7 +32,8 @@ class SettingsActivity : AppCompatActivity() {
 
         val supportButton = findViewById<LinearLayout>(R.id.support_settings_line)
         supportButton.setOnClickListener {
-            Intent(Intent.ACTION_SENDTO).apply {
+            Intent().apply {
+                action = Intent.ACTION_SENDTO
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.support_email)))
                 putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_letter_subject))
@@ -43,7 +44,8 @@ class SettingsActivity : AppCompatActivity() {
 
         val licenseAgreementButton = findViewById<LinearLayout>(R.id.license_agreement_settings_line)
         licenseAgreementButton.setOnClickListener {
-            Intent(Intent.ACTION_VIEW).apply {
+            Intent().apply {
+                action = Intent.ACTION_VIEW
                 data = Uri.parse(getString(R.string.license_agreement_link))
                 startActivity(this)
             }
