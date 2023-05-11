@@ -34,7 +34,7 @@ class SettingsActivity : AppCompatActivity() {
         supportButton.setOnClickListener {
             Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:")
-                putExtra(Intent.EXTRA_EMAIL, getString(R.string.support_email))
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.support_email)))
                 putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_letter_subject))
                 putExtra(Intent.EXTRA_TEXT, getString(R.string.support_letter_text))
                 startActivity(this)
