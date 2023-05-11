@@ -30,7 +30,6 @@
     <style name="TitleButton">
         <item name="android:layout_width">@dimen/title_button_size</item>
         <item name="android:layout_height">@dimen/title_button_size</item>
-        <item name="android:background">@color/white</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
         <item name="backgroundTint">?attr/colorPrimary</item>
         <item name="tint">?attr/colorOnPrimary</item>
