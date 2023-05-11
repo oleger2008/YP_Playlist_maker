@@ -32,7 +32,7 @@ class SettingsActivity : AppCompatActivity() {
 
         val supportButton = findViewById<LinearLayout>(R.id.support_settings_line)
         supportButton.setOnClickListener {
-            val supIntent = Intent(Intent.ACTION_SENDTO).apply {
+            Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL, getString(R.string.support_email))
                 putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_letter_subject))
