@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/settings_line_image_margin_start"
-            android:layout_marginEnd="@dimen/common_indent"/>
+            android:layout_marginEnd="@dimen/settings_line_image_margin_end"/>
 
     </LinearLayout>
 
