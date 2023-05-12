@@ -13,20 +13,20 @@
         android:text="@string/app_name"
         android:layout_marginTop="@dimen/title_text_margin_top"
         android:layout_marginBottom="@dimen/title_header_margin_bot"
-        android:layout_marginStart="@dimen/common_indent_16"
-        android:layout_marginEnd="@dimen/common_indent_16"/>
+        android:layout_marginStart="@dimen/common_indent"
+        android:layout_marginEnd="@dimen/common_indent"/>
 
     <Button style="@style/MainButton"
         android:id="@+id/search_button"
         android:text="@string/search"
         app:icon="@drawable/loop"
-        android:layout_marginBottom="@dimen/common_indent_16"/>
+        android:layout_marginBottom="@dimen/common_indent"/>
 
     <Button style="@style/MainButton"
         android:id="@+id/media_library_button"
         android:text="@string/media_library"
         app:icon="@drawable/media"
-        android:layout_marginBottom="@dimen/common_indent_16"/>
+        android:layout_marginBottom="@dimen/common_indent"/>
 
     <Button style="@style/MainButton"
         android:id="@+id/settings_button"

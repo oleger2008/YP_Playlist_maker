@@ -7,7 +7,7 @@
     <dimen name="main_button_corner_radius">16dp</dimen>
     <dimen name="search_bar_corner_radius">8dp</dimen>
     <dimen name="track_image_corner_radius">2dp</dimen>
-    <dimen name="common_indent_16">16dp</dimen>
+    <dimen name="common_indent">16dp</dimen>
     <dimen name="line_content_indent">8dp</dimen>
     <dimen name="icon_padding">8dp</dimen>
     <dimen name="title_header_height">56dp</dimen>

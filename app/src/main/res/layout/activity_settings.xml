@@ -42,7 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent_16"
+            android:layout_marginStart="@dimen/common_indent"
             android:layout_gravity="start|center_vertical"/>
         
         <Switch style="@style/DarkThemeSwitch"
@@ -66,7 +66,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent_16"
+            android:layout_marginStart="@dimen/common_indent"
             android:layout_gravity="start|center_vertical"/>
 
         <ImageView style="@style/LineImage"
@@ -90,7 +90,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent_16"
+            android:layout_marginStart="@dimen/common_indent"
             android:layout_gravity="start|center_vertical"/>
 
         <ImageView style="@style/LineImage"
@@ -114,7 +114,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent_16"
+            android:layout_marginStart="@dimen/common_indent"
             android:layout_gravity="start|center_vertical"/>
 
         <ImageView style="@style/LineImage"
