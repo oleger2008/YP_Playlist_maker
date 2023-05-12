@@ -34,7 +34,7 @@
         <item name="colorPrimaryVariant">@color/yp_gray</item>
         <item name="colorOnPrimary">@color/yp_black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/yp_light_gray</item>
+        <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/yp_gray</item>
         <item name="colorOnSecondary">@color/yp_gray</item>
         <!-- Status bar color. -->
