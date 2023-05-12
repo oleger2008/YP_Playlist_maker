@@ -32,7 +32,7 @@
     <LinearLayout
         android:id="@+id/dark_theme_settings_line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_line_height"
+        android:layout_height="@dimen/line_height"
         android:orientation="horizontal"
         tools:ignore="UseSwitchCompatOrMaterialXml">
 
@@ -56,7 +56,7 @@
     <LinearLayout
         android:id="@+id/share_settings_line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_line_height"
+        android:layout_height="@dimen/line_height"
         android:orientation="horizontal">
 
         <TextView style="@style/SettingsLineText"
@@ -79,7 +79,7 @@
     <LinearLayout
         android:id="@+id/support_settings_line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_line_height"
+        android:layout_height="@dimen/line_height"
         android:orientation="horizontal">
 
         <TextView style="@style/SettingsLineText"
@@ -102,7 +102,7 @@
     <LinearLayout
         android:id="@+id/license_agreement_settings_line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_line_height"
+        android:layout_height="@dimen/line_height"
         android:orientation="horizontal">
 
         <TextView style="@style/SettingsLineText"
