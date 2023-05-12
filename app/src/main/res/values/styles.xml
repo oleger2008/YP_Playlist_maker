@@ -50,7 +50,7 @@
         <item name="android:textFontWeight">400</item>
     </style>
 
-    <style name="SettingsLineImage">
+    <style name="LineImage">
         <item name="android:layout_gravity">center_vertical</item>
         <item name="tint">?attr/colorSecondaryVariant</item>
     </style>
