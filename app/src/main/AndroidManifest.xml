@@ -20,7 +20,7 @@
         <activity
             android:name=".SearchActivity"
             android:exported="false"
-            android:theme="@style/Theme.PlaylistMakerCommon"/>
+            android:theme="@style/Theme.PlaylistMakerSearchFrame"/>
         <activity
             android:name=".SettingsActivity"
             android:exported="false"
