@@ -6,36 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="?attr/colorPrimary"
     tools:context=".SettingsActivity">
 
     <LinearLayout
-        android:id="@+id/panel_header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/panel_header_height"
-        android:layout_marginBottom="@dimen/panel_header_margin_bot"
-        android:orientation="horizontal">
+        android:layout_height="@dimen/title_header_height"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/title_header_margin_bot">
 
-        <ImageButton
-            android:id="@+id/return_button"
-            android:layout_width="@dimen/panel_button_size"
-            android:layout_height="@dimen/panel_button_size"
-            android:layout_margin="@dimen/panel_button_margin"
-            android:background="@color/white"
-            android:foreground="?attr/selectableItemBackground"
-            android:src="@drawable/arrow_back"/>
+        <ImageButton style="@style/TitleButton"
+            android:id="@+id/settings_return_button"
+            android:src="@drawable/arrow_back"
+            android:layout_margin="@dimen/title_button_margin"/>
 
-        <TextView
-            android:id="@+id/title"
+        <TextView style="@style/TitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="@dimen/panel_title_margin_top"
             android:text="@string/settings"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title"
-            android:fontFamily="@font/ys_display_medium"
-            android:textFontWeight="500"/>
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/title_text_margin_top"/>
 
     </LinearLayout>
 
@@ -46,25 +36,20 @@
         android:orientation="horizontal"
         tools:ignore="UseSwitchCompatOrMaterialXml">
 
-        <TextView
+        <TextView style="@style/SettingsLineText"
             android:id="@+id/dark_theme_text"
+            android:text="@string/dark_theme"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/dark_theme"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title"
-            android:fontFamily="@font/ys_display_regular"
-            android:textFontWeight="400"/>
+            android:layout_marginStart="@dimen/common_indent"/>
         
-        <Switch
+        <Switch style="@style/DarkThemeSwitch"
             android:id="@+id/dark_theme_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="18dp"
-            android:layout_gravity="center_vertical"/>
+            android:layout_marginStart="@dimen/settings_line_image_margin_start"
+            android:layout_marginEnd="@dimen/settings_line_image_margin_end"/>
 
     </LinearLayout>
 
@@ -72,28 +57,22 @@
         android:id="@+id/share_settings_line"
         android:layout_width="match_parent"
         android:layout_height="@dimen/settings_line_height"
-        android:orientation="horizontal"
-        tools:ignore="UseSwitchCompatOrMaterialXml">
+        android:orientation="horizontal">
 
-        <TextView
+        <TextView style="@style/SettingsLineText"
             android:id="@+id/share_text"
+            android:text="@string/share"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/share"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title"
-            android:fontFamily="@font/ys_display_regular"
-            android:textFontWeight="400"/>
+            android:layout_marginStart="@dimen/common_indent"/>
 
-        <ImageView
+        <ImageView style="@style/SettingsLineImage"
+            android:src="@drawable/share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/common_indent"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/share"/>
+            android:layout_marginStart="@dimen/settings_line_image_margin_start"
+            android:layout_marginEnd="@dimen/settings_line_image_margin_end"/>
 
     </LinearLayout>
 
@@ -101,28 +80,22 @@
         android:id="@+id/support_settings_line"
         android:layout_width="match_parent"
         android:layout_height="@dimen/settings_line_height"
-        android:orientation="horizontal"
-        tools:ignore="UseSwitchCompatOrMaterialXml">
+        android:orientation="horizontal">
 
-        <TextView
+        <TextView style="@style/SettingsLineText"
             android:id="@+id/support_text"
+            android:text="@string/support"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/support"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title"
-            android:fontFamily="@font/ys_display_regular"
-            android:textFontWeight="400"/>
+            android:layout_marginStart="@dimen/common_indent"/>
 
-        <ImageView
+        <ImageView style="@style/SettingsLineImage"
+            android:src="@drawable/support"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/common_indent"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/support"/>
+            android:layout_marginStart="@dimen/settings_line_image_margin_start"
+            android:layout_marginEnd="@dimen/settings_line_image_margin_end"/>
 
     </LinearLayout>
 
@@ -130,28 +103,22 @@
         android:id="@+id/license_agreement_settings_line"
         android:layout_width="match_parent"
         android:layout_height="@dimen/settings_line_height"
-        android:orientation="horizontal"
-        tools:ignore="UseSwitchCompatOrMaterialXml">
+        android:orientation="horizontal">
 
-        <TextView
+        <TextView style="@style/SettingsLineText"
             android:id="@+id/license_agreement_text"
+            android:text="@string/license_agreement"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"
-            android:layout_gravity="start|center_vertical"
-            android:text="@string/license_agreement"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title"
-            android:fontFamily="@font/ys_display_regular"
-            android:textFontWeight="400"/>
+            android:layout_marginStart="@dimen/common_indent"/>
 
-        <ImageView
+        <ImageView style="@style/SettingsLineImage"
+            android:src="@drawable/arrow_forward"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/common_indent"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/arrow_forward"/>
+            android:layout_marginStart="@dimen/settings_line_image_margin_start"
+            android:layout_marginEnd="@dimen/settings_line_image_margin_end"/>
 
     </LinearLayout>
 

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="title">22sp</dimen>
+    <dimen name="regular">16sp</dimen>
     <dimen name="button_text">22sp</dimen>
     <dimen name="corner_radius_16">16dp</dimen>
+    <dimen name="corner_radius_8">8dp</dimen>
     <dimen name="common_indent">16dp</dimen>
     <dimen name="icon_padding">8dp</dimen>
-    <dimen name="panel_header_height">56dp</dimen>
-    <dimen name="panel_header_margin_bot">40dp</dimen>
-    <dimen name="panel_title_margin_top">14dp</dimen>
-    <dimen name="panel_button_size">48dp</dimen>
-    <dimen name="panel_button_margin">4dp</dimen>
-    <dimen name="settings_line_height">62dp</dimen>
+    <dimen name="title_header_height">56dp</dimen>
+    <dimen name="title_header_margin_bot">40dp</dimen>
+    <dimen name="title_text_margin_top">16dp</dimen>
+    <dimen name="title_button_size">48dp</dimen>
+    <dimen name="title_button_margin">4dp</dimen>
+    <dimen name="settings_line_height">64dp</dimen>
+    <dimen name="settings_line_image_margin_start">8dp</dimen>
+    <dimen name="settings_line_image_margin_end">12dp</dimen>
+    <dimen name="query_text_size">16sp</dimen>
+    <dimen name="search_edit_text_padding">12dp</dimen>
+    <dimen name="search_edit_text_height">36dp</dimen>
 </resources>

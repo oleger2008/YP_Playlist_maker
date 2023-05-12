@@ -9,20 +9,24 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:theme="@style/Theme.PlaylistMakerCommon"
         tools:targetApi="31">
         <activity
             android:name=".MediaLibraryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PlaylistMakerCommon"/>
         <activity
             android:name=".SearchActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PlaylistMakerCommon"/>
         <activity
             android:name=".SettingsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PlaylistMakerCommon"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.PlaylistMakerMainFrame">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
