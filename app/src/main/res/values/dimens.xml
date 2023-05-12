@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="header_text_size">22sp</dimen>
     <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_11">11sp</dimen>
     <dimen name="button_text">22sp</dimen>
