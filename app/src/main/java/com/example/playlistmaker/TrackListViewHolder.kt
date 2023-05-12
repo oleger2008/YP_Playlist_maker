@@ -14,7 +14,7 @@ class TrackListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val trackDuration = itemView.findViewById<TextView>(R.id.track_duration)
 
     fun bind(model: Track) {
-        val radius = trackImage.resources.getDimensionPixelSize(R.dimen.corner_radius_2)
+        val radius = trackImage.resources.getDimensionPixelSize(R.dimen.track_image_corner_radius)
         Glide.with(itemView)
             .load(model.artworkUrl100)
             .placeholder(R.drawable.track_default_image)
