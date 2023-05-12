@@ -36,13 +36,14 @@
         android:orientation="horizontal"
         tools:ignore="UseSwitchCompatOrMaterialXml">
 
-        <TextView style="@style/LineText"
+        <TextView style="@style/LineTextPrimary"
             android:id="@+id/dark_theme_text"
             android:text="@string/dark_theme"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"/>
+            android:layout_marginStart="@dimen/common_indent"
+            android:layout_gravity="start|center_vertical"/>
         
         <Switch style="@style/DarkThemeSwitch"
             android:id="@+id/dark_theme_switch"
@@ -59,13 +60,14 @@
         android:layout_height="@dimen/line_height"
         android:orientation="horizontal">
 
-        <TextView style="@style/LineText"
+        <TextView style="@style/LineTextPrimary"
             android:id="@+id/share_text"
             android:text="@string/share"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"/>
+            android:layout_marginStart="@dimen/common_indent"
+            android:layout_gravity="start|center_vertical"/>
 
         <ImageView style="@style/LineImage"
             android:src="@drawable/share"
@@ -82,13 +84,14 @@
         android:layout_height="@dimen/line_height"
         android:orientation="horizontal">
 
-        <TextView style="@style/LineText"
+        <TextView style="@style/LineTextPrimary"
             android:id="@+id/support_text"
             android:text="@string/support"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"/>
+            android:layout_marginStart="@dimen/common_indent"
+            android:layout_gravity="start|center_vertical"/>
 
         <ImageView style="@style/LineImage"
             android:src="@drawable/support"
@@ -105,13 +108,14 @@
         android:layout_height="@dimen/line_height"
         android:orientation="horizontal">
 
-        <TextView style="@style/LineText"
+        <TextView style="@style/LineTextPrimary"
             android:id="@+id/license_agreement_text"
             android:text="@string/license_agreement"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="@dimen/common_indent"/>
+            android:layout_marginStart="@dimen/common_indent"
+            android:layout_gravity="start|center_vertical"/>
 
         <ImageView style="@style/LineImage"
             android:src="@drawable/arrow_forward"
