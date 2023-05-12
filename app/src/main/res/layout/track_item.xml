@@ -20,8 +20,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginHorizontal="@dimen/common_indent_8"
-        android:paddingHorizontal="@dimen/common_indent_8"
+        android:layout_marginHorizontal="@dimen/line_content_indent"
+        android:paddingHorizontal="@dimen/line_content_indent"
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
 
