@@ -29,7 +29,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:layout_marginBottom="@dimen/common_indent">
+        android:layout_marginBottom="@dimen/common_indent_16">
 
         <EditText
             android:id="@+id/search_edit_text"
@@ -37,7 +37,7 @@
             android:layout_height="@dimen/search_edit_text_height"
             android:layout_gravity="center"
             android:paddingHorizontal="@dimen/search_edit_text_padding"
-            android:layout_marginHorizontal="@dimen/common_indent"
+            android:layout_marginHorizontal="@dimen/common_indent_16"
             android:drawableStart="@drawable/loop_16"
             android:drawablePadding="@dimen/icon_padding"
             android:inputType="text"
