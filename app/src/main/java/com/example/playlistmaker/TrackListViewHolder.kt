@@ -14,11 +14,12 @@ class TrackListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val trackDuration = itemView.findViewById<TextView>(R.id.track_duration)
 
     fun bind(model: Track) {
+        val radius = trackImage.resources.getDimensionPixelSize(R.dimen.corner_radius_2)
         Glide.with(itemView)
             .load(model.artworkUrl100)
             .placeholder(R.drawable.track_default_image)
             .centerCrop()
-            .transform(RoundedCorners(2))
+            .transform(RoundedCorners(radius))
             .into(trackImage)
         trackName.text = model.trackName
         trackAuthor.text = model.artistName
