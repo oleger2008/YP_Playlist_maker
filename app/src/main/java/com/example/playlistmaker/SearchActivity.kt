@@ -10,11 +10,13 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import androidx.recyclerview.widget.RecyclerView
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var searchEditText: EditText
     private lateinit var clearButton: ImageView
     private lateinit var returnButton: ImageButton
+    private lateinit var trackList: RecyclerView
     private var searchText: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +31,8 @@ class SearchActivity : AppCompatActivity() {
         searchEditText = findViewById(R.id.search_edit_text)
         clearButton = findViewById(R.id.search_clear_button)
         returnButton = findViewById(R.id.search_return_button)
+        trackList = findViewById(R.id.track_list)
+        trackList.adapter = TrackListAdapter(getMockSearchResult())
     }
 
     private fun setListeners() {
