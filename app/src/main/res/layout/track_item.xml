@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/line_height"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/line_padding"
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:id="@+id/track_image"
+        android:src="@drawable/track_default_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="?attr/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/line_content_indent"
+        android:paddingHorizontal="@dimen/line_content_indent"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView style="@style/LineTextPrimary"
+            android:id="@+id/track_name"
+            tools:text="My favourite song ever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="start"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start">
+
+            <TextView style="@style/LineTextSecondary"
+                android:id="@+id/track_author"
+                tools:text="Best Band Evers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:src="@drawable/eclipse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView style="@style/LineTextSecondary"
+                android:id="@+id/track_duration"
+                tools:text="4:20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/LineImage"
+        android:src="@drawable/arrow_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
