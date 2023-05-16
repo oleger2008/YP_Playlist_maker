@@ -1,13 +1,16 @@
 package com.example.playlistmaker
 
-import android.view.View
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
-class TrackListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class TrackListViewHolder(parent: ViewGroup) :
+    RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(
+        R.layout.track_item, parent, false)) {
     private val trackImage = itemView.findViewById<ImageView>(R.id.track_image)
     private val trackName = itemView.findViewById<TextView>(R.id.track_name)
     private val trackAuthor = itemView.findViewById<TextView>(R.id.track_author)
