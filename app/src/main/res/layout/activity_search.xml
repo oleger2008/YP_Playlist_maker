@@ -51,7 +51,9 @@
             android:drawableTint="?attr/colorOnSecondary"
             android:textSize="@dimen/query_text_size"
             android:fontFamily="@font/ys_display_regular"
-            android:textFontWeight="400"/>
+            android:textFontWeight="400"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
 
         <ImageView
             android:id="@+id/search_clear_button"
