@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
@@ -46,6 +47,13 @@ class SearchActivity : AppCompatActivity() {
             finish()
         }
         queryInput.addTextChangedListener(getSearchTextWatcher())
+        queryInput.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                //TODO SEND request
+                true
+            }
+            false
+        }
     }
 
     private fun getSearchTextWatcher(): TextWatcher {
