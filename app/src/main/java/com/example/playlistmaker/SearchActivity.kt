@@ -13,11 +13,13 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 class SearchActivity : AppCompatActivity() {
+    private var searchText: String = ""
+
     private lateinit var searchEditText: EditText
     private lateinit var clearButton: ImageView
     private lateinit var returnButton: ImageButton
     private lateinit var trackList: RecyclerView
-    private var searchText: String = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,5 +128,6 @@ class SearchActivity : AppCompatActivity() {
 
     companion object {
         private const val SEARCH_TEXT = "SEARCH_TEXT"
+        private const val BASE_URL = "https://itunes.apple.com"
     }
 }
