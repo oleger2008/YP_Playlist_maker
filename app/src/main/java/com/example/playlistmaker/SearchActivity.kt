@@ -14,6 +14,9 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -70,8 +73,7 @@ class SearchActivity : AppCompatActivity() {
         queryInput.addTextChangedListener(getSearchTextWatcher())
         queryInput.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                //TODO SEND request
-                true
+                searchTrack(queryInput.text.toString())
             }
             false
         }
@@ -118,6 +120,33 @@ class SearchActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         searchText = savedInstanceState.getString(SEARCH_TEXT, getString(R.string.search))
         queryInput.setText(searchText)
+    }
+
+    private fun searchTrack(trackName: String) {
+        iTunesApi.search(trackName).enqueue(object : Callback<TrackResponse> {
+            override fun onResponse(
+                call: Call<TrackResponse>,
+                response: Response<TrackResponse>
+            ) {
+                val status: SearchResponseStatus
+                if (response.code() == 200) {
+                    tracks.clear()
+                    if (response.body()?.results?.isNotEmpty() == true) {
+                        tracks.addAll(response.body()?.results!!)
+                        trackListAdapter.notifyDataSetChanged()
+                    }
+                    status = if (tracks.isEmpty()) SearchResponseStatus.EMPTY
+                    else SearchResponseStatus.OK
+                } else {
+                    status = SearchResponseStatus.ERROR
+                }
+                showInfoMessage(status)
+            }
+
+            override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
+                showInfoMessage(SearchResponseStatus.ERROR)
+            }
+        })
     }
 
     private fun showInfoMessage(status: SearchResponseStatus) {
