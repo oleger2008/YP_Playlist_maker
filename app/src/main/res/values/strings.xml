@@ -18,4 +18,5 @@
     <string name="problems_with_internet">Проблемы со связью.
 
 Загрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="refresh">Обновить</string>
 </resources>
