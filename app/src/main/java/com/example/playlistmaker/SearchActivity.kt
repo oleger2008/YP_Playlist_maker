@@ -120,6 +120,15 @@ class SearchActivity : AppCompatActivity() {
         queryInput.setText(searchText)
     }
 
+    private fun showErrorInfoMessage() {
+        errorMessage.text = getString(R.string.problems_with_internet)
+        errorImage.setImageResource(R.drawable.problem_with_internet)
+
+        errorMessage.visibility = View.VISIBLE
+        errorImage.visibility = View.VISIBLE
+        refreshButton.visibility = View.VISIBLE
+    }
+
     companion object {
         private const val SEARCH_TEXT = "SEARCH_TEXT"
         private const val BASE_URL = "https://itunes.apple.com"
