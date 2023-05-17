@@ -3,6 +3,7 @@
     <dimen name="header_text_size">22sp</dimen>
     <dimen name="regular_text_size">16sp</dimen>
     <dimen name="small_text_size">11sp</dimen>
+    <dimen name="info_message_text_size">19sp</dimen>
     <dimen name="button_text">22sp</dimen>
     <dimen name="main_button_corner_radius">16dp</dimen>
     <dimen name="search_bar_corner_radius">8dp</dimen>
