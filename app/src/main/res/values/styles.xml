@@ -74,4 +74,16 @@
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:textAlignment">center</item>
     </style>
+
+    <style name="SmallButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">@dimen/small_button_text_size</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:letterSpacing">0.</item>
+        <item name="android:backgroundTint">?attr/colorOnPrimary</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cornerRadius">@dimen/small_button_corner_radius</item>
+    </style>
 </resources>
