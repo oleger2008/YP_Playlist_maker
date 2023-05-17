@@ -15,9 +15,7 @@
     <string name="license_agreement_link">https://yandex.ru/legal/practicum_offer/</string>
 
     <string name="clear">Очистить</string>
-    <string name="problems_with_internet">Проблемы со связью.
-
-Загрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="problems_with_internet">Проблемы со связью.\n\nЗагрузка не удалась. Проверьте подключение к интернету</string>
     <string name="nothing_found">Ничего не нашлось</string>
     <string name="refresh">Обновить</string>
 </resources>
