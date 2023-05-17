@@ -120,6 +120,14 @@ class SearchActivity : AppCompatActivity() {
         queryInput.setText(searchText)
     }
 
+    private fun showInfoMessage(status: SearchResponseStatus) {
+        when (status) {
+            SearchResponseStatus.OK -> hideInfoMessage()
+            SearchResponseStatus.EMPTY -> showEmptyInfoMessage()
+            SearchResponseStatus.ERROR -> showErrorInfoMessage()
+        }
+    }
+
     private fun hideInfoMessage() {
         errorMessage.visibility = View.GONE
         errorImage.visibility = View.GONE
