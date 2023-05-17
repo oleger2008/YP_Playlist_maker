@@ -8,9 +8,11 @@ import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -33,6 +35,9 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var clearButton: ImageView
     private lateinit var returnButton: ImageButton
     private lateinit var trackList: RecyclerView
+    private lateinit var errorMessage: TextView
+    private lateinit var errorImage: ImageView
+    private lateinit var refreshButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +54,9 @@ class SearchActivity : AppCompatActivity() {
         returnButton = findViewById(R.id.search_return_button)
         trackList = findViewById(R.id.track_list)
         trackList.adapter = trackListAdapter
+        errorMessage = findViewById(R.id.search_error_message)
+        errorImage = findViewById(R.id.search_error_image)
+        refreshButton = findViewById(R.id.search_refresh_button)
     }
 
     private fun setListeners() {
