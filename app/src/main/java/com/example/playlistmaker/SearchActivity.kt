@@ -120,6 +120,12 @@ class SearchActivity : AppCompatActivity() {
         queryInput.setText(searchText)
     }
 
+    private fun hideInfoMessage() {
+        errorMessage.visibility = View.GONE
+        errorImage.visibility = View.GONE
+        refreshButton.visibility = View.GONE
+    }
+
     private fun showEmptyInfoMessage() {
         errorMessage.text = getString(R.string.nothing_found)
         errorImage.setImageResource(R.drawable.nothing_found)
