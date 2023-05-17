@@ -84,8 +84,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/problems_with_internet_message_margin_top"
-            android:visibility="gone">
+            android:layout_marginTop="@dimen/problems_with_internet_message_margin_top">
 
             <ImageView
                 android:id="@+id/search_error_image"
@@ -93,7 +92,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/common_indent"/>
+                android:layout_marginBottom="@dimen/common_indent"
+                android:visibility="gone"/>
 
             <TextView style="@style/InfoMessageText"
                 android:id="@+id/search_error_message"
@@ -101,14 +101,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/info_message_text_margin"
-                android:layout_marginBottom="@dimen/info_message_text_margin"/>
+                android:layout_marginBottom="@dimen/info_message_text_margin"
+                android:visibility="gone"/>
 
             <Button style="@style/SmallButton"
                 android:id="@+id/search_refresh_button"
                 android:text="@string/refresh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
         </LinearLayout>
 
     </FrameLayout>
