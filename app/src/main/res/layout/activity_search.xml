@@ -81,7 +81,6 @@
             android:visibility="visible"/>
 
         <LinearLayout
-            android:id="@+id/problems_with_internet"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,14 +88,16 @@
             android:visibility="gone">
 
             <ImageView
-                android:src="@drawable/problem_with_internet"
+                android:id="@+id/search_error_image"
+                tools:src="@drawable/nothing_found"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="@dimen/common_indent"/>
 
             <TextView style="@style/InfoMessageText"
-                android:text="@string/problems_with_internet"
+                android:id="@+id/search_error_message"
+                tools:text="@string/problems_with_internet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/info_message_text_margin"
