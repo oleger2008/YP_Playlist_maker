@@ -23,6 +23,7 @@ class SearchActivity : AppCompatActivity() {
     private val iTunesApi = retrofit.create(ITunesApi::class.java)
     private var searchText: String = ""
     private val tracks: ArrayList<Track> = arrayListOf()
+    private val trackListAdapter = TrackListAdapter(tracks)
 
     private lateinit var queryInput: EditText
     private lateinit var clearButton: ImageView
@@ -43,7 +44,7 @@ class SearchActivity : AppCompatActivity() {
         clearButton = findViewById(R.id.search_clear_button)
         returnButton = findViewById(R.id.search_return_button)
         trackList = findViewById(R.id.track_list)
-        trackList.adapter = TrackListAdapter(tracks)
+        trackList.adapter = trackListAdapter
     }
 
     private fun setListeners() {
