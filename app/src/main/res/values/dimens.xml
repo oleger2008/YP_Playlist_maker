@@ -23,4 +23,5 @@
     <dimen name="search_edit_text_padding">12dp</dimen>
     <dimen name="search_edit_text_height">36dp</dimen>
     <dimen name="line_padding">12dp</dimen>
+    <dimen name="info_message_text_margin">24dp</dimen>
 </resources>
