@@ -66,8 +66,7 @@ class SearchActivity : AppCompatActivity() {
         clearButton.setOnClickListener {
             queryInput.setText("")
             hideKeyboard()
-            tracks.clear()
-            trackListAdapter.notifyDataSetChanged()
+            clearTrackList()
         }
         returnButton.setOnClickListener {
             finish()
@@ -82,6 +81,11 @@ class SearchActivity : AppCompatActivity() {
         refreshButton.setOnClickListener {
             searchTrack(queryInput.text.toString())
         }
+    }
+
+    private fun clearTrackList() {
+        tracks.clear()
+        trackListAdapter.notifyDataSetChanged()
     }
 
     private fun getSearchTextWatcher(): TextWatcher {
@@ -143,8 +147,7 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
-                tracks.clear()
-                trackListAdapter.notifyDataSetChanged()
+                clearTrackList()
                 showInfoMessage(SearchResponseStatus.ERROR)
             }
         })
