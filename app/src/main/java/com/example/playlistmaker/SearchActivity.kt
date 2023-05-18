@@ -128,25 +128,30 @@ class SearchActivity : AppCompatActivity() {
                 call: Call<TrackResponse>,
                 response: Response<TrackResponse>
             ) {
-                val status: SearchResponseStatus
-                if (response.code() == 200) {
-                    tracks.clear()
-                    if (response.body()?.results?.isNotEmpty() == true) {
-                        tracks.addAll(response.body()?.results!!)
-                        trackListAdapter.notifyDataSetChanged()
-                    }
-                    status = if (tracks.isEmpty()) SearchResponseStatus.EMPTY
-                    else SearchResponseStatus.OK
-                } else {
-                    status = SearchResponseStatus.ERROR
+                tracks.clear()
+                val isGoodResponse: Boolean = response.code() == 200
+                if (isGoodResponse && (response.body()?.results?.isNotEmpty() == true)) {
+                    tracks.addAll(response.body()?.results!!)
                 }
-                showInfoMessage(status)
+                trackListAdapter.notifyDataSetChanged()
+                showInfoMessage(getSearchResponseStatus(isGoodResponse))
             }
 
             override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
+                tracks.clear()
+                trackListAdapter.notifyDataSetChanged()
                 showInfoMessage(SearchResponseStatus.ERROR)
             }
         })
+    }
+
+    private fun getSearchResponseStatus(isGoodResponse: Boolean): SearchResponseStatus {
+        return if (isGoodResponse) {
+            if (tracks.isEmpty()) SearchResponseStatus.EMPTY
+            else SearchResponseStatus.OK
+        } else {
+            SearchResponseStatus.ERROR
+        }
     }
 
     private fun showInfoMessage(status: SearchResponseStatus) {
