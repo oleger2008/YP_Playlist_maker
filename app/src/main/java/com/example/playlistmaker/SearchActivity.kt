@@ -66,6 +66,8 @@ class SearchActivity : AppCompatActivity() {
         clearButton.setOnClickListener {
             queryInput.setText("")
             hideKeyboard()
+            tracks.clear()
+            trackListAdapter.notifyDataSetChanged()
         }
         returnButton.setOnClickListener {
             finish()
