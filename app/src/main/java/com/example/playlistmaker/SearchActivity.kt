@@ -79,6 +79,9 @@ class SearchActivity : AppCompatActivity() {
             }
             false
         }
+        refreshButton.setOnClickListener {
+            searchTrack(queryInput.text.toString())
+        }
     }
 
     private fun getSearchTextWatcher(): TextWatcher {
