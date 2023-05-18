@@ -29,6 +29,6 @@ class TrackListViewHolder(parent: ViewGroup) :
         trackName.text = model.trackName
         trackAuthor.text = model.artistName
         trackDuration.text = SimpleDateFormat("mm:ss", Locale.getDefault())
-            .format(model.trackTimeMillis)
+            .format(model.trackTimeMillis.toInt())
     }
 }
