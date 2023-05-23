@@ -21,7 +21,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class SearchActivity : AppCompatActivity() {
-    enum class SearchResponseStatus {
+    private enum class SearchResponseStatus {
         OK, EMPTY, ERROR
     }
 
