@@ -7,10 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 class TrackListAdapter(
     private val trackList: ArrayList<Track>
 ) : RecyclerView.Adapter<TrackListViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrackListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.track_item, parent, false)
-        return TrackListViewHolder(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrackListViewHolder =
+        TrackListViewHolder(parent)
 
     override fun getItemCount(): Int = trackList.size
 

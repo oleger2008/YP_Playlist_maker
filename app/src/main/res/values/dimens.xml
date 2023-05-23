@@ -3,10 +3,13 @@
     <dimen name="header_text_size">22sp</dimen>
     <dimen name="regular_text_size">16sp</dimen>
     <dimen name="small_text_size">11sp</dimen>
+    <dimen name="small_button_text_size">14sp</dimen>
+    <dimen name="info_message_text_size">19sp</dimen>
     <dimen name="button_text">22sp</dimen>
     <dimen name="main_button_corner_radius">16dp</dimen>
     <dimen name="search_bar_corner_radius">8dp</dimen>
     <dimen name="track_image_corner_radius">2dp</dimen>
+    <dimen name="small_button_corner_radius">54dp</dimen>
     <dimen name="common_indent">16dp</dimen>
     <dimen name="line_content_indent">8dp</dimen>
     <dimen name="icon_padding">8dp</dimen>
@@ -22,4 +25,6 @@
     <dimen name="search_edit_text_padding">12dp</dimen>
     <dimen name="search_edit_text_height">36dp</dimen>
     <dimen name="line_padding">12dp</dimen>
+    <dimen name="info_message_text_margin">24dp</dimen>
+    <dimen name="problems_with_internet_message_margin_top">84dp</dimen>
 </resources>

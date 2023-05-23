@@ -51,7 +51,9 @@
             android:drawableTint="?attr/colorOnSecondary"
             android:textSize="@dimen/query_text_size"
             android:fontFamily="@font/ys_display_regular"
-            android:textFontWeight="400"/>
+            android:textFontWeight="400"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
 
         <ImageView
             android:id="@+id/search_clear_button"
@@ -66,11 +68,51 @@
 
     </FrameLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/track_list"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/track_item"/>
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/track_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/track_item"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/problems_with_internet_message_margin_top">
+
+            <ImageView
+                android:id="@+id/search_error_image"
+                tools:src="@drawable/nothing_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/common_indent"
+                android:visibility="gone"/>
+
+            <TextView style="@style/InfoMessageText"
+                android:id="@+id/search_error_message"
+                tools:text="@string/problems_with_internet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/info_message_text_margin"
+                android:layout_marginBottom="@dimen/info_message_text_margin"
+                android:visibility="gone"/>
+
+            <Button style="@style/SmallButton"
+                android:id="@+id/search_refresh_button"
+                android:text="@string/refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>
