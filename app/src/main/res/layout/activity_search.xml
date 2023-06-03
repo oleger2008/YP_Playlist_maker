@@ -40,7 +40,7 @@
             android:paddingHorizontal="@dimen/search_edit_text_padding"
             android:layout_marginHorizontal="@dimen/common_indent"
             android:drawableStart="@drawable/loop_16"
-            android:drawablePadding="@dimen/icon_padding"
+            android:drawablePadding="@dimen/small_padding"
             android:inputType="text"
             android:hint="@string/search"
             android:textColorHint="?attr/colorOnSecondary"
