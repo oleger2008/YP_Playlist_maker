@@ -8,20 +8,31 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 
 class SettingsActivity : AppCompatActivity() {
+    private lateinit var returnButton: ImageButton
+    private lateinit var shareButton: LinearLayout
+    private lateinit var supportButton: LinearLayout
+    private lateinit var licenseAgreementButton: LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        lateInit()
         initButtonsCallbacks()
     }
 
+    private fun lateInit() {
+        returnButton = findViewById(R.id.settings_return_button)
+        shareButton = findViewById(R.id.share_settings_line)
+        supportButton = findViewById(R.id.support_settings_line)
+        licenseAgreementButton = findViewById(R.id.license_agreement_settings_line)
+    }
+
     private fun initButtonsCallbacks() {
-        val returnButton = findViewById<ImageButton>(R.id.settings_return_button)
         returnButton.setOnClickListener {
             finish()
         }
 
-        val shareButton = findViewById<LinearLayout>(R.id.share_settings_line)
         shareButton.setOnClickListener {
             Intent().apply {
                 action = Intent.ACTION_SEND
@@ -31,7 +42,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        val supportButton = findViewById<LinearLayout>(R.id.support_settings_line)
         supportButton.setOnClickListener {
             Intent().apply {
                 action = Intent.ACTION_SENDTO
@@ -43,7 +53,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        val licenseAgreementButton = findViewById<LinearLayout>(R.id.license_agreement_settings_line)
         licenseAgreementButton.setOnClickListener {
             Intent().apply {
                 action = Intent.ACTION_VIEW
