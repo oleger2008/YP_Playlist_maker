@@ -143,12 +143,12 @@ class SearchActivity : AppCompatActivity() {
                     tracks.addAll(response.body()?.results!!)
                 }
                 trackListAdapter.notifyDataSetChanged()
-                showInfoMessage(getSearchResponseStatus(isGoodResponse))
+                handleResponseStatus(getSearchResponseStatus(isGoodResponse))
             }
 
             override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
                 clearTrackList()
-                showInfoMessage(SearchResponseStatus.ERROR)
+                handleResponseStatus(SearchResponseStatus.ERROR)
             }
         })
     }
@@ -162,7 +162,7 @@ class SearchActivity : AppCompatActivity() {
         }
     }
 
-    private fun showInfoMessage(status: SearchResponseStatus) {
+    private fun handleResponseStatus(status: SearchResponseStatus) {
         when (status) {
             SearchResponseStatus.OK -> hideInfoMessage()
             SearchResponseStatus.EMPTY -> showEmptyInfoMessage()
