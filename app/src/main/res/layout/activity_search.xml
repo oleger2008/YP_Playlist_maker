@@ -29,8 +29,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginBottom="@dimen/common_indent">
+        android:layout_height="52dp">
 
         <EditText
             android:id="@+id/search_edit_text"
@@ -76,9 +75,54 @@
             android:id="@+id/track_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_indent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/track_item"
             android:visibility="visible"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/search_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/info_message_text_margin"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/title_header_height"
+                    android:layout_marginBottom="@dimen/small_padding"
+                    android:text="@string/you_searched"
+                    android:textSize="@dimen/header_text_size_medium"
+                    android:fontFamily="@font/ys_display_medium"
+                    android:textFontWeight="500"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:gravity="center"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/history_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/track_item"
+                    android:visibility="visible"/>
+
+                <Button style="@style/SmallButton"
+                    android:id="@+id/clear_history_button"
+                    android:text="@string/clear_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="@dimen/info_message_text_margin"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
         <LinearLayout
             android:orientation="vertical"
