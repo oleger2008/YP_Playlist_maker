@@ -6,15 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.LinearLayout
-import android.widget.Switch
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SettingsActivity : AppCompatActivity() {
     private lateinit var returnButton: ImageButton
-    private lateinit var themeSwitcher: Switch
+    private lateinit var themeSwitcher: SwitchMaterial
     private lateinit var shareButton: LinearLayout
     private lateinit var supportButton: LinearLayout
     private lateinit var licenseAgreementButton: LinearLayout
-    private val sharedPreferences = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +26,7 @@ class SettingsActivity : AppCompatActivity() {
     private fun lateInit() {
         returnButton = findViewById(R.id.settings_return_button)
         themeSwitcher = findViewById(R.id.themeSwitcher)
-        themeSwitcher.isChecked = sharedPreferences.getBoolean(DARK_THEME, false)
+        themeSwitcher.isChecked = (applicationContext as App).darkTheme
         shareButton = findViewById(R.id.share_settings_line)
         supportButton = findViewById(R.id.support_settings_line)
         licenseAgreementButton = findViewById(R.id.license_agreement_settings_line)
