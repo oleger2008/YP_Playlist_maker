@@ -12,8 +12,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.TextView
-import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
@@ -45,7 +45,7 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var errorImage: ImageView
     private lateinit var refreshButton: Button
     private lateinit var searchHistoryList: RecyclerView
-    private lateinit var historyLayout: NestedScrollView
+    private lateinit var historyLayout: ScrollView
     private lateinit var clearHistoryButton: Button
 
 
