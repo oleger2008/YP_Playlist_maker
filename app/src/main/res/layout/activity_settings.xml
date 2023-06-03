@@ -36,21 +36,15 @@
         android:orientation="horizontal"
         tools:ignore="UseSwitchCompatOrMaterialXml">
 
-        <TextView style="@style/LineTextPrimary"
-            android:id="@+id/dark_theme_text"
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            style="@style/DarkThemeSwitch"
+            android:id="@+id/themeSwitcher"
             android:text="@string/dark_theme"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="@dimen/common_indent"
-            android:layout_gravity="start|center_vertical"/>
-        
-        <Switch style="@style/DarkThemeSwitch"
-            android:id="@+id/dark_theme_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/settings_line_image_margin_start"
-            android:layout_marginEnd="@dimen/settings_line_image_margin_end"/>
+            android:layout_marginEnd="@dimen/settings_line_image_margin_end"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
