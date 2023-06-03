@@ -35,7 +35,10 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var searchHistory: SearchHistory
     private lateinit var searchHistoryAdapter: TrackListAdapter
     private val tracks: ArrayList<Track> = arrayListOf()
-    private val trackListAdapter = TrackListAdapter(tracks) { searchHistory.addTrack(it) }
+    private val trackListAdapter = TrackListAdapter(tracks) {
+        searchHistory.addTrack(it)
+        searchHistoryAdapter.notifyDataSetChanged()
+    }
 
     private lateinit var queryInput: EditText
     private lateinit var clearQueryButton: ImageView
@@ -47,8 +50,6 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var searchHistoryList: RecyclerView
     private lateinit var historyLayout: ScrollView
     private lateinit var clearHistoryButton: Button
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +76,7 @@ class SearchActivity : AppCompatActivity() {
         searchHistory = SearchHistory(getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE))
         searchHistoryAdapter = TrackListAdapter(searchHistory.recentTracks) {
             searchHistory.addTrack(it)
+            searchHistoryAdapter.notifyDataSetChanged()
         }
         searchHistoryList.adapter = searchHistoryAdapter
         historyLayout = findViewById(R.id.search_history)
@@ -93,6 +95,7 @@ class SearchActivity : AppCompatActivity() {
         }
         queryInput.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
+                clearTrackList()
                 hideInfoMessage()
                 showSearchHistory()
             } else {
@@ -103,6 +106,7 @@ class SearchActivity : AppCompatActivity() {
         queryInput.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 searchTrack(queryInput.text.toString())
+                queryInput.clearFocus()
             }
             false
         }
@@ -128,12 +132,12 @@ class SearchActivity : AppCompatActivity() {
 
     private fun showSearchHistory() {
         if (searchHistory.recentTracks.isNotEmpty()) {
-            searchHistoryList.visibility = View.VISIBLE
+            historyLayout.visibility = View.VISIBLE
         }
     }
 
     private fun hideSearchHistory() {
-        searchHistoryList.visibility = View.GONE
+        historyLayout.visibility = View.GONE
     }
 
     private fun clearTrackList() {
