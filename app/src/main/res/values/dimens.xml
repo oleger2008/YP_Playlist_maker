@@ -14,7 +14,7 @@
     <dimen name="line_content_indent">8dp</dimen>
     <dimen name="small_padding">8dp</dimen>
     <dimen name="title_header_height">56dp</dimen>
-    <dimen name="title_header_margin_bot">40dp</dimen>
+    <dimen name="title_header_margin">40dp</dimen>
     <dimen name="title_text_margin_top">16dp</dimen>
     <dimen name="title_button_size">48dp</dimen>
     <dimen name="title_button_margin">4dp</dimen>

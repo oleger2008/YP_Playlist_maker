@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_header_height"
         android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/title_header_margin_bot">
+        android:layout_marginBottom="@dimen/title_header_margin">
 
         <ImageButton style="@style/TitleButton"
             android:id="@+id/settings_return_button"
