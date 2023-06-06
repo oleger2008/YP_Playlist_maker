@@ -80,7 +80,7 @@
             tools:listitem="@layout/track_item"
             android:visibility="visible"/>
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/search_history"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -120,7 +120,7 @@
 
             </LinearLayout>
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
 
         <LinearLayout
             android:orientation="vertical"
