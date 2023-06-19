@@ -40,15 +40,15 @@ class SearchActivity : AppCompatActivity() {
         searchHistoryAdapter.notifyDataSetChanged()
     }
 
-    private lateinit var queryInput: EditText
+    private lateinit var queryInputEditText: EditText
     private lateinit var clearQueryButton: ImageView
     private lateinit var returnButton: ImageButton
-    private lateinit var trackList: RecyclerView
-    private lateinit var errorMessage: TextView
-    private lateinit var errorImage: ImageView
+    private lateinit var trackListRecyclerView: RecyclerView
+    private lateinit var errorMessageTextView: TextView
+    private lateinit var errorImageView: ImageView
     private lateinit var refreshButton: Button
-    private lateinit var searchHistoryList: RecyclerView
-    private lateinit var historyLayout: NestedScrollView
+    private lateinit var searchHistoryListRecyclerView: RecyclerView
+    private lateinit var historyNestedScrollView: NestedScrollView
     private lateinit var clearHistoryButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,31 +60,31 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        queryInput = findViewById(R.id.search_edit_text)
+        queryInputEditText = findViewById(R.id.search_edit_text)
         clearQueryButton = findViewById(R.id.search_clear_button)
         returnButton = findViewById(R.id.search_return_button)
         clearHistoryButton = findViewById(R.id.clear_history_button)
         refreshButton = findViewById(R.id.search_refresh_button)
 
-        trackList = findViewById(R.id.track_list)
-        trackList.adapter = trackListAdapter
+        trackListRecyclerView = findViewById(R.id.track_list)
+        trackListRecyclerView.adapter = trackListAdapter
 
-        errorMessage = findViewById(R.id.search_error_message)
-        errorImage = findViewById(R.id.search_error_image)
+        errorMessageTextView = findViewById(R.id.search_error_message)
+        errorImageView = findViewById(R.id.search_error_image)
 
-        searchHistoryList = findViewById(R.id.history_list)
+        searchHistoryListRecyclerView = findViewById(R.id.history_list)
         searchHistory = SearchHistory(getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE))
         searchHistoryAdapter = TrackListAdapter(searchHistory.recentTracks) {
             searchHistory.addTrack(it)
             searchHistoryAdapter.notifyDataSetChanged()
         }
-        searchHistoryList.adapter = searchHistoryAdapter
-        historyLayout = findViewById(R.id.search_history)
+        searchHistoryListRecyclerView.adapter = searchHistoryAdapter
+        historyNestedScrollView = findViewById(R.id.search_history)
     }
 
     private fun setListeners() {
         clearQueryButton.setOnClickListener {
-            queryInput.setText("")
+            queryInputEditText.setText("")
             hideKeyboard()
             clearTrackList()
             hideInfoMessage()
@@ -93,7 +93,7 @@ class SearchActivity : AppCompatActivity() {
         returnButton.setOnClickListener {
             finish()
         }
-        queryInput.setOnFocusChangeListener { _, hasFocus ->
+        queryInputEditText.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 clearTrackList()
                 hideInfoMessage()
@@ -102,42 +102,42 @@ class SearchActivity : AppCompatActivity() {
                 hideSearchHistory()
             }
         }
-        queryInput.addTextChangedListener(getSearchTextWatcher())
-        queryInput.setOnEditorActionListener { _, actionId, _ ->
+        queryInputEditText.addTextChangedListener(getSearchTextWatcher())
+        queryInputEditText.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                searchTrack(queryInput.text.toString())
-                queryInput.clearFocus()
+                searchTrack(queryInputEditText.text.toString())
+                queryInputEditText.clearFocus()
             }
             false
         }
         refreshButton.setOnClickListener {
-            searchTrack(queryInput.text.toString())
+            searchTrack(queryInputEditText.text.toString())
         }
         clearHistoryButton.setOnClickListener {
             searchHistory.clear()
             hideSearchHistory()
         }
 
-        trackList.setOnTouchListener { _, _ ->
+        trackListRecyclerView.setOnTouchListener { _, _ ->
             hideKeyboard()
-            queryInput.clearFocus()
+            queryInputEditText.clearFocus()
             false
         }
-        searchHistoryList.setOnTouchListener { _, _ ->
+        searchHistoryListRecyclerView.setOnTouchListener { _, _ ->
             hideKeyboard()
-            queryInput.clearFocus()
+            queryInputEditText.clearFocus()
             false
         }
     }
 
     private fun showSearchHistory() {
         if (searchHistory.recentTracks.isNotEmpty()) {
-            historyLayout.visibility = View.VISIBLE
+            historyNestedScrollView.visibility = View.VISIBLE
         }
     }
 
     private fun hideSearchHistory() {
-        historyLayout.visibility = View.GONE
+        historyNestedScrollView.visibility = View.GONE
     }
 
     private fun clearTrackList() {
@@ -178,8 +178,8 @@ class SearchActivity : AppCompatActivity() {
 
     private fun hideKeyboard() {
         val keyboard = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        keyboard.hideSoftInputFromWindow(queryInput.windowToken, 0)
-        queryInput.clearFocus()
+        keyboard.hideSoftInputFromWindow(queryInputEditText.windowToken, 0)
+        queryInputEditText.clearFocus()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -190,7 +190,7 @@ class SearchActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         searchText = savedInstanceState.getString(SEARCH_TEXT, getString(R.string.search))
-        queryInput.setText(searchText)
+        queryInputEditText.setText(searchText)
     }
 
     private fun searchTrack(trackName: String) {
@@ -233,26 +233,26 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun hideInfoMessage() {
-        errorMessage.visibility = View.GONE
-        errorImage.visibility = View.GONE
+        errorMessageTextView.visibility = View.GONE
+        errorImageView.visibility = View.GONE
         refreshButton.visibility = View.GONE
     }
 
     private fun showEmptyInfoMessage() {
-        errorMessage.text = getString(R.string.nothing_found)
-        errorImage.setImageResource(R.drawable.nothing_found)
+        errorMessageTextView.text = getString(R.string.nothing_found)
+        errorImageView.setImageResource(R.drawable.nothing_found)
 
-        errorMessage.visibility = View.VISIBLE
-        errorImage.visibility = View.VISIBLE
+        errorMessageTextView.visibility = View.VISIBLE
+        errorImageView.visibility = View.VISIBLE
         refreshButton.visibility = View.GONE
     }
 
     private fun showErrorInfoMessage() {
-        errorMessage.text = getString(R.string.problems_with_internet)
-        errorImage.setImageResource(R.drawable.problem_with_internet)
+        errorMessageTextView.text = getString(R.string.problems_with_internet)
+        errorImageView.setImageResource(R.drawable.problem_with_internet)
 
-        errorMessage.visibility = View.VISIBLE
-        errorImage.visibility = View.VISIBLE
+        errorMessageTextView.visibility = View.VISIBLE
+        errorImageView.visibility = View.VISIBLE
         refreshButton.visibility = View.VISIBLE
     }
 
