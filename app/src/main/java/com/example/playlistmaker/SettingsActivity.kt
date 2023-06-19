@@ -6,22 +6,41 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SettingsActivity : AppCompatActivity() {
+    private lateinit var returnButton: ImageButton
+    private lateinit var themeSwitcher: SwitchMaterial
+    private lateinit var shareButton: LinearLayout
+    private lateinit var supportButton: LinearLayout
+    private lateinit var licenseAgreementButton: LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        initViews()
         initButtonsCallbacks()
     }
 
+    private fun initViews() {
+        returnButton = findViewById(R.id.settings_return_button)
+        themeSwitcher = findViewById(R.id.themeSwitcher)
+        themeSwitcher.isChecked = (applicationContext as App).darkTheme
+        shareButton = findViewById(R.id.share_settings_line)
+        supportButton = findViewById(R.id.support_settings_line)
+        licenseAgreementButton = findViewById(R.id.license_agreement_settings_line)
+    }
+
     private fun initButtonsCallbacks() {
-        val returnButton = findViewById<ImageButton>(R.id.settings_return_button)
         returnButton.setOnClickListener {
             finish()
         }
 
-        val shareButton = findViewById<LinearLayout>(R.id.share_settings_line)
+        themeSwitcher.setOnCheckedChangeListener { _, checked ->
+            (applicationContext as App).switchTheme(checked)
+        }
+
         shareButton.setOnClickListener {
             Intent().apply {
                 action = Intent.ACTION_SEND
@@ -31,7 +50,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        val supportButton = findViewById<LinearLayout>(R.id.support_settings_line)
         supportButton.setOnClickListener {
             Intent().apply {
                 action = Intent.ACTION_SENDTO
@@ -43,7 +61,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        val licenseAgreementButton = findViewById<LinearLayout>(R.id.license_agreement_settings_line)
         licenseAgreementButton.setOnClickListener {
             Intent().apply {
                 action = Intent.ACTION_VIEW
