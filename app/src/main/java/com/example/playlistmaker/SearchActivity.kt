@@ -154,7 +154,7 @@ class SearchActivity : AppCompatActivity() {
 
             override fun onTextChanged(sequence: CharSequence, start: Int, before: Int,
                                        count: Int) {
-                clearQueryButton.visibility = clearButtonVisibility(sequence)
+                clearQueryButton.visibility = getClearButtonVisibility(sequence)
                 if (sequence.isNullOrEmpty()) {
                     hideInfoMessage()
                     showSearchHistory()
@@ -168,7 +168,7 @@ class SearchActivity : AppCompatActivity() {
         }
     }
 
-    private fun clearButtonVisibility(s: CharSequence?): Int {
+    private fun getClearButtonVisibility(s: CharSequence?): Int {
         return if (s.isNullOrEmpty()) {
             View.GONE
         } else {
