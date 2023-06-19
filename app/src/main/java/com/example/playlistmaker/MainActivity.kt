@@ -14,11 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        lateInit()
+        initViews()
         initButtonsCallbacks()
     }
 
-    private fun lateInit() {
+    private fun initViews() {
         searchButton = findViewById(R.id.search_button)
         mediaLibraryButton = findViewById(R.id.media_library_button)
         settingsButton = findViewById(R.id.settings_button)

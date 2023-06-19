@@ -55,11 +55,11 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        lateInit()
+        initViews()
         setListeners()
     }
 
-    private fun lateInit() {
+    private fun initViews() {
         queryInput = findViewById(R.id.search_edit_text)
         clearQueryButton = findViewById(R.id.search_clear_button)
         returnButton = findViewById(R.id.search_return_button)

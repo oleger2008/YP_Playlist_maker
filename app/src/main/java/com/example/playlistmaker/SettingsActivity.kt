@@ -19,11 +19,11 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        lateInit()
+        initViews()
         initButtonsCallbacks()
     }
 
-    private fun lateInit() {
+    private fun initViews() {
         returnButton = findViewById(R.id.settings_return_button)
         themeSwitcher = findViewById(R.id.themeSwitcher)
         themeSwitcher.isChecked = (applicationContext as App).darkTheme
