@@ -56,9 +56,7 @@ class PlayerActivity : AppCompatActivity() {
         albumNameGroup = findViewById(R.id.player_album_name_group)
     }
 
-    private fun loadTrack(): Track {
-        return intent.getParcelableExtra(PLAYER_TRACK_DATA)!!
-    }
+    private fun loadTrack(): Track = intent.getParcelableExtra(PLAYER_TRACK_DATA)!!
 
     private fun setListeners() {
         returnButton.setOnClickListener {
