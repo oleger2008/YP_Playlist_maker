@@ -15,7 +15,7 @@
         android:theme="@style/Theme.PlaylistMakerCommon"
         tools:targetApi="31">
         <activity
-            android:name=".PlaylistActivity"
+            android:name=".PlayerActivity"
             android:exported="false"
             android:theme="@style/Theme.PlaylistMakerCommon" />
         <activity
