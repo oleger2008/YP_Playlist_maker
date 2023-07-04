@@ -39,10 +39,7 @@ class SearchActivity : AppCompatActivity() {
     private val trackListAdapter = TrackListAdapter(tracks) {
         searchHistory.addTrack(it)
         searchHistoryAdapter.notifyDataSetChanged()
-        Intent(this, PlayerActivity::class.java).apply {
-            putExtra(PLAYER_TRACK_DATA, it)
-            startActivity(this)
-        }
+        startPlayerActivity(it)
     }
 
     private lateinit var queryInputEditText: EditText
@@ -82,9 +79,17 @@ class SearchActivity : AppCompatActivity() {
         searchHistoryAdapter = TrackListAdapter(searchHistory.recentTracks) {
             searchHistory.addTrack(it)
             searchHistoryAdapter.notifyDataSetChanged()
+            startPlayerActivity(it)
         }
         searchHistoryListRecyclerView.adapter = searchHistoryAdapter
         historyNestedScrollView = findViewById(R.id.search_history)
+    }
+
+    private fun startPlayerActivity(track: Track) {
+        Intent(this, PlayerActivity::class.java).apply {
+            putExtra(PLAYER_TRACK_DATA, track)
+            startActivity(this)
+        }
     }
 
     private fun setListeners() {
