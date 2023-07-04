@@ -1,6 +1,7 @@
 package com.example.playlistmaker
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -38,6 +39,10 @@ class SearchActivity : AppCompatActivity() {
     private val trackListAdapter = TrackListAdapter(tracks) {
         searchHistory.addTrack(it)
         searchHistoryAdapter.notifyDataSetChanged()
+        Intent(this, PlayerActivity::class.java).apply {
+            putExtra(PLAYER_TRACK_DATA, it)
+            startActivity(this)
+        }
     }
 
     private lateinit var queryInputEditText: EditText
