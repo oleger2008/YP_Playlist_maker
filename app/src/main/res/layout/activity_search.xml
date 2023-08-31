@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:text="@string/search"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="@dimen/title_text_margin_top"/>
+            android:layout_marginTop="@dimen/title_text_margin_top"
+            android:fontFamily="500"/>
 
     </LinearLayout>
 
@@ -126,7 +127,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/problems_with_internet_message_margin_top">
+            android:layout_marginTop="@dimen/center_image_margin_top">
 
             <ImageView
                 android:id="@+id/search_error_image"

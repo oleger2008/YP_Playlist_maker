@@ -25,7 +25,8 @@
             android:layout_height="wrap_content"
             android:text="@string/settings"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="@dimen/title_text_margin_top"/>
+            android:layout_marginTop="@dimen/title_text_margin_top"
+            android:fontFamily="500"/>
 
     </LinearLayout>
 
